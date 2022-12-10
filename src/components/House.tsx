@@ -5,7 +5,8 @@ import SeatBox from './SeatBox'
 const House = ({style}:any) => {
   return (
     <View style={style}>
-      <SeatBox style={styles.seatBox} />
+      {/* <SeatBox style={styles.seatBox} /> */}
+      <Text>House</Text>
     </View>
   )
 }
@@ -14,8 +15,5 @@ export default House
 
 const styles = StyleSheet.create({
     seatBox:{
-        padding: "20%",
-        borderColor: "black",
-        borderRadius: 1
     }
 })

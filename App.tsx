@@ -7,13 +7,13 @@ import HeaderPanel from './src/components/HeaderPanel'
 const App = () => {
   return (
     <View style={styles.container}>
-        <ImageBackground
-          source={require('./images/background.jpg')}
-          style={styles.backgroundImage} resizeMode="cover">
-          <HeaderPanel style={styles.headerPanel} />
-          <GameBox style={styles.gameBox} />
-          <FooterPanel style={styles.footerPanel} />
-        </ImageBackground>
+      <ImageBackground
+        source={require('./images/background.jpg')}
+        style={styles.backgroundImage} resizeMode="cover">
+        <HeaderPanel style={styles.headerPanel} />
+        <GameBox style={styles.gameBox} />
+        <FooterPanel style={styles.footerPanel} />
+      </ImageBackground>
     </View>
   )
 }
@@ -29,11 +29,7 @@ const styles = StyleSheet.create({
     justifyContent: "center"
   },
   gameBox: {
-    flex: 5,
-    borderColor: 'red',
-    borderWidth: 1,
-    flexWrap: "wrap",
-    flexDirection: "row"
+    flex: 5
   },
   headerPanel: {
     flex: 2

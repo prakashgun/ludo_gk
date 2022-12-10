@@ -7,15 +7,21 @@ import Path from './Path'
 const GameBox = ({ style }: any) => {
     return (
         <View style={style}>
-            <House style={[styles.house, styles.redHouse]} />
-            <Path style={[styles.path, styles.greenPath]} />
-            <House style={[styles.house, styles.greenHouse]} />
-            <Path style={[styles.path, styles.redPath]} />
-            <Destination style={styles.destination} />
-            <Path style={[styles.path, styles.yellowPath]} />
-            <House style={[styles.house, styles.blueHouse]} />
-            <Path style={[styles.path, styles.bluePath]} />
-            <House style={[styles.house, styles.yellowHouse]} />
+            <View style={styles.firstRow}>
+                <House style={[styles.house, styles.redHouse]} />
+                <Path style={[styles.path, styles.greenPath]} />
+                <House style={[styles.house, styles.greenHouse]} />
+            </View>
+            <View style={styles.secondRow}>
+                <Path style={[styles.path, styles.redPath]} />
+                <Destination style={styles.destination} />
+                <Path style={[styles.path, styles.yellowPath]} />
+            </View>
+            <View style={styles.thirdRow}>
+                <House style={[styles.house, styles.blueHouse]} />
+                <Path style={[styles.path, styles.bluePath]} />
+                <House style={[styles.house, styles.yellowHouse]} />
+            </View>
         </View>
     )
 }
@@ -23,11 +29,22 @@ const GameBox = ({ style }: any) => {
 export default GameBox
 
 const styles = StyleSheet.create({
+    firstRow: {
+        flex: 2,
+        flexDirection: "row"
+    },
+    secondRow: {
+        flex: 1,
+        flexDirection: "row"
+    },
+    thirdRow: {
+        flex: 2,
+        flexDirection: "row"
+    },
     house: {
         borderWidth: 1,
         borderColor: "black",
-        width: "40%",
-        height: "40%"
+        flex:2
     },
     redHouse: {
         backgroundColor: "red"
@@ -47,29 +64,24 @@ const styles = StyleSheet.create({
     },
     redPath: {
         backgroundColor: "red",
-        width: "40%",
-        height: "20%"
+        flex: 2
     },
     greenPath: {
         backgroundColor: "green",
-        width: "20%",
-        height: "40%"
+        flex: 1
     },
     bluePath: {
         backgroundColor: "blue",
-        width: "20%",
-        height: "40%"
+        flex: 1
     },
     yellowPath: {
         backgroundColor: "yellow",
-        width: "40%",
-        height: "20%"
+        flex: 2
     },
     destination: {
+        backgroundColor: "white",
         borderWidth: 1,
         borderColor: "black",
-        width: "20%",
-        height: "20%",
-        backgroundColor: "purple"
+        flex: 1
     }
 })
