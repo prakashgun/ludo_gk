@@ -31,66 +31,72 @@ export default GameBox
 const styles = StyleSheet.create({
     firstRow: {
         flex: 2,
-        flexDirection: "row"
+        flexDirection: "row",
+        borderBottomWidth: 1,
+        borderColor: "black"
     },
     secondRow: {
         flex: 1,
-        flexDirection: "row"
+        flexDirection: "row",
+        borderBottomWidth: 1,
+        borderColor: "black"
     },
     thirdRow: {
         flex: 2,
         flexDirection: "row"
     },
     house: {
-        borderWidth: 1,
         borderColor: "black",
         flex:2,
         justifyContent: "center",
         alignItems: "center"
     },
     redHouse: {
-        backgroundColor: "#EE1B26"
+        backgroundColor: "#EE1B26",
+        borderRightWidth:1
     },
     greenHouse: {
         backgroundColor: "#00A04A"
     },
     blueHouse: {
-        backgroundColor: "#24AEFE"
+        backgroundColor: "#24AEFE",
+        borderRightWidth:1
     },
     yellowHouse: {
-        backgroundColor: "#FFDE17"
+        backgroundColor: "#FFDE17",
     },
     path: {
-        borderWidth: 1,
         borderColor: "black"
     },
     redPath: {
         backgroundColor: "#EE1B26",
-        flex: 2
+        flex: 2,
+        borderRightWidth:1
     },
     greenPath: {
         backgroundColor: "#00A04A",
-        flex: 1
+        flex: 1,
+        borderRightWidth:1
     },
     bluePath: {
         backgroundColor: "#24AEFE",
-        flex: 1
+        flex: 1,
+        borderRightWidth:1
     },
     yellowPath: {
         backgroundColor: "#FFDE17",
-        flex: 2
+        flex: 2,
+        borderLeftWidth: 1
     },
     destination: {
         backgroundColor: "purple",
-        borderWidth: 1,
-        borderColor: "black",
         flex: 1
     },
     seat:{
         height: 20,
         width: 20,
-        borderRadius: 10,
-        margin: 10
+        borderRadius:13,
+        margin: 9
     },
     redSeat: {
         backgroundColor: "#EE1B26"
