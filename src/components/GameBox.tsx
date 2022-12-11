@@ -8,9 +8,9 @@ const GameBox = ({ style }: any) => {
     return (
         <View style={style}>
             <View style={styles.firstRow}>
-                <House style={[styles.house, styles.redHouse]} />
+                <House style={[styles.house, styles.redHouse]} seatStyle={[styles.seat, styles.redSeat]} />
                 <Path style={[styles.path, styles.greenPath]} />
-                <House style={[styles.house, styles.greenHouse]} />
+                <House style={[styles.house, styles.greenHouse]} seatStyle={[styles.seat, styles.greenSeat]} />
             </View>
             <View style={styles.secondRow}>
                 <Path style={[styles.path, styles.redPath]} />
@@ -18,9 +18,9 @@ const GameBox = ({ style }: any) => {
                 <Path style={[styles.path, styles.yellowPath]} />
             </View>
             <View style={styles.thirdRow}>
-                <House style={[styles.house, styles.blueHouse]} />
+                <House style={[styles.house, styles.blueHouse]} seatStyle={[styles.seat, styles.blueSeat]} />
                 <Path style={[styles.path, styles.bluePath]} />
-                <House style={[styles.house, styles.yellowHouse]} />
+                <House style={[styles.house, styles.yellowHouse]} seatStyle={[styles.seat, styles.yellowHouse]} />
             </View>
         </View>
     )
@@ -44,44 +44,64 @@ const styles = StyleSheet.create({
     house: {
         borderWidth: 1,
         borderColor: "black",
-        flex:2
+        flex:2,
+        justifyContent: "center",
+        alignItems: "center"
     },
     redHouse: {
-        backgroundColor: "red"
+        backgroundColor: "#EE1B26"
     },
     greenHouse: {
-        backgroundColor: "green"
+        backgroundColor: "#00A04A"
     },
     blueHouse: {
-        backgroundColor: "blue"
+        backgroundColor: "#24AEFE"
     },
     yellowHouse: {
-        backgroundColor: "yellow"
+        backgroundColor: "#FFDE17"
     },
     path: {
         borderWidth: 1,
         borderColor: "black"
     },
     redPath: {
-        backgroundColor: "red",
+        backgroundColor: "#EE1B26",
         flex: 2
     },
     greenPath: {
-        backgroundColor: "green",
+        backgroundColor: "#00A04A",
         flex: 1
     },
     bluePath: {
-        backgroundColor: "blue",
+        backgroundColor: "#24AEFE",
         flex: 1
     },
     yellowPath: {
-        backgroundColor: "yellow",
+        backgroundColor: "#FFDE17",
         flex: 2
     },
     destination: {
-        backgroundColor: "white",
+        backgroundColor: "purple",
         borderWidth: 1,
         borderColor: "black",
         flex: 1
+    },
+    seat:{
+        height: 20,
+        width: 20,
+        borderRadius: 10,
+        margin: 10
+    },
+    redSeat: {
+        backgroundColor: "#EE1B26"
+    },
+    greenSeat: {
+        backgroundColor: "#00A04A"
+    },
+    blueSeat: {
+        backgroundColor: "#24AEFE"
+    },
+    yellowSeat: {
+        backgroundColor: "#FFDE17"
     }
 })
