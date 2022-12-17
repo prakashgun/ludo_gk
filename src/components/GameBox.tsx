@@ -96,8 +96,8 @@ const styles = StyleSheet.create({
         borderLeftWidth: 1
     },
     destination: {
-        backgroundColor: "purple",
-        flex: 1
+        backgroundColor: "white",
+        flex: 1,
     },
     seat:{
         height: 26,
